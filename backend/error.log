@@ -1,0 +1,73 @@
+[10-Aug-2026 16:03:52 UTC] PHP Fatal error:  Uncaught Error: Class "AuthController" not found in /home/wanjohi/Class/3.1/Software Engineering/cp/backend/index.php:50
+Stack trace:
+#0 {main}
+  thrown in /home/wanjohi/Class/3.1/Software Engineering/cp/backend/index.php on line 50
+[10-Aug-2026 16:10:34 UTC] === Login attempt ===
+[10-Aug-2026 16:10:34 UTC] Raw input: {"username":"admin","password":"password"}
+[10-Aug-2026 16:10:34 UTC] Decoded data: Array
+(
+    [username] => admin
+    [password] => password
+)
+
+[10-Aug-2026 16:10:34 UTC] User found: Yes
+[10-Aug-2026 16:10:34 UTC] User data: Array
+(
+    [id] => 1
+    [username] => admin
+    [password] => $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
+    [name] => Administrator
+    [email] => admin@university.com
+    [role] => admin
+    [created_at] => 2026-08-10 18:53:55
+)
+
+[10-Aug-2026 16:10:34 UTC] Stored hash: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
+[10-Aug-2026 16:10:34 UTC] Input password: password
+[10-Aug-2026 16:10:34 UTC] Password verify result: TRUE
+[10-Aug-2026 16:11:37 UTC] === Login attempt ===
+[10-Aug-2026 16:11:37 UTC] Raw input: {"username":"student1","password":"password"}
+[10-Aug-2026 16:11:37 UTC] Decoded data: Array
+(
+    [username] => student1
+    [password] => password
+)
+
+[10-Aug-2026 16:11:37 UTC] User found: Yes
+[10-Aug-2026 16:11:37 UTC] User data: Array
+(
+    [id] => 2
+    [username] => student1
+    [password] => $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
+    [name] => John Doe
+    [email] => john@student.com
+    [role] => student
+    [created_at] => 2026-08-10 18:53:55
+)
+
+[10-Aug-2026 16:11:37 UTC] Stored hash: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
+[10-Aug-2026 16:11:37 UTC] Input password: password
+[10-Aug-2026 16:11:37 UTC] Password verify result: TRUE
+[11-Aug-2026 08:02:09 UTC] === Login attempt ===
+[11-Aug-2026 08:02:09 UTC] Raw input: {"username":"admin","password":"password123"}
+[11-Aug-2026 08:02:09 UTC] Decoded data: Array
+(
+    [username] => admin
+    [password] => password123
+)
+
+[11-Aug-2026 08:02:09 UTC] User found: Yes
+[11-Aug-2026 08:02:09 UTC] User data: Array
+(
+    [id] => 1
+    [username] => admin
+    [password] => $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
+    [name] => Administrator
+    [email] => admin@university.com
+    [role] => admin
+    [created_at] => 2026-08-10 18:53:55
+)
+
+[11-Aug-2026 08:02:09 UTC] Stored hash: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
+[11-Aug-2026 08:02:09 UTC] Input password: password123
+[11-Aug-2026 08:02:09 UTC] Password verify result: FALSE

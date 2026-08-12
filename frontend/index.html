@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Registration System</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 Course Registration System</h1>
+            <div id="userInfo" class="user-info">
+                <span id="userName"></span>
+                <button id="logoutBtn" class="btn btn-danger">Logout</button>
+            </div>
+        </header>
+
+        <!-- Login Section -->
+        <div id="loginSection" class="section">
+            <div class="login-form">
+                <h2>Login</h2>
+                <div class="form-group">
+                    <input type="text" id="loginUsername" placeholder="Username" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="loginPassword" placeholder="Password" required>
+                </div>
+                <button id="loginBtn" class="btn btn-primary">Login</button>
+                <p class="demo-hint">Demo: admin/password123 or student1/password123</p>
+            </div>
+        </div>
+
+        <!-- Dashboard Section -->
+        <div id="dashboardSection" class="section" style="display: none;">
+            <div class="dashboard-grid">
+                <!-- Available Courses -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3>📖 Available Courses</h3>
+                        <button id="refreshCoursesBtn" class="btn btn-sm btn-secondary">Refresh</button>
+                    </div>
+                    <div class="card-body" id="availableCourses">
+                        <p>Loading courses...</p>
+                    </div>
+                </div>
+
+                <!-- My Registrations -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3>✅ My Courses</h3>
+                        <button id="refreshRegistrationsBtn" class="btn btn-sm btn-secondary">Refresh</button>
+                    </div>
+                    <div class="card-body" id="myRegistrations">
+                        <p>Loading your registrations...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

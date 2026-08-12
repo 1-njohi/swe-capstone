@@ -1,0 +1,24 @@
+{
+    "timestamp": "2026-08-10 18:11:06",
+    "total": 4,
+    "passed": 4,
+    "failed": 0,
+    "results": [
+        {
+            "name": "Course Model - Get All Courses",
+            "status": "PASS"
+        },
+        {
+            "name": "Course Model - Find Course by ID",
+            "status": "PASS"
+        },
+        {
+            "name": "Course Model - Capacity Check",
+            "status": "PASS"
+        },
+        {
+            "name": "Course Model - Available Spots",
+            "status": "PASS"
+        }
+    ]
+}
