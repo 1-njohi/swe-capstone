@@ -39,9 +39,9 @@ CREATE TABLE IF NOT EXISTS registrations (
 
 -- Insert sample data
 INSERT INTO users (username, password, name, email, role) VALUES
-('admin', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Administrator', 'admin@university.com', 'admin'),
-('student1', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'John Doe', 'john@student.com', 'student'),
-('student2', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Jane Smith', 'jane@student.com', 'student');
+('admin', '$2y$12$fva95gj.3BbMMl3Og9DI0.Jm6BDD4T7FwgnYBz/12loWYWkNB2mra', 'Administrator', 'admin@university.com', 'admin'),
+('student1', '$2y$12$fva95gj.3BbMMl3Og9DI0.Jm6BDD4T7FwgnYBz/12loWYWkNB2mra', 'John Doe', 'john@student.com', 'student'),
+('student2', '$2y$12$fva95gj.3BbMMl3Og9DI0.Jm6BDD4T7FwgnYBz/12loWYWkNB2mra', 'Jane Smith', 'jane@student.com', 'student');
 
 INSERT INTO courses (code, name, description, credits, capacity) VALUES
 ('CS101', 'Introduction to Programming', 'Learn programming fundamentals with Python', 3, 30),

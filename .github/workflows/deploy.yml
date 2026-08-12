@@ -1,4 +1,4 @@
-name: CI/CD Pipeline
+name: CI - Run Tests
 
 on:
   push:
@@ -7,13 +7,10 @@ on:
     branches: [ main, master ]
 
 jobs:
-  # ============================================
-  # JOB 1: Run Tests
-  # ============================================
   test:
-    name: 🧪 Run Tests
+    name: 🧪 Run PHP Tests
     runs-on: ubuntu-latest
-    
+
     services:
       mysql:
         image: mysql:8.0
@@ -27,41 +24,34 @@ jobs:
           --health-interval=10s
           --health-timeout=5s
           --health-retries=5
-    
+
     steps:
       - name: 📥 Checkout code
         uses: actions/checkout@v3
-      
+
       - name: 🔧 Setup PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: '8.1'
           extensions: pdo, pdo_mysql, mysqli, json, mbstring
-      
-      - name: 📦 Install dependencies (if any)
-        run: |
-          if [ -f composer.json ]; then
-            composer install --no-interaction --no-progress
-          fi
-      
+
       - name: 🗄️ Wait for MySQL
         run: |
           while ! mysqladmin ping -h"127.0.0.1" --silent; do
             echo "Waiting for MySQL..."
             sleep 2
           done
-      
-      - name: 🗄️ Setup test database
+
+      - name: 🗄️ Create test database and import schema
         run: |
           mysql -h 127.0.0.1 -u root -proot -e "CREATE DATABASE IF NOT EXISTS course_registration_test;"
           mysql -h 127.0.0.1 -u root -proot course_registration_test < database/schema.sql
-      
-      - name: 🔧 Configure test environment
+
+      - name: 🔧 Override database config for CI
         run: |
-          # Create a test config file
-          cat > backend/config/test_database.php << 'EOF'
+          cat > backend/config/database.php << 'EOF'
           <?php
-          class TestDatabase {
+          class Database {
               private static $instance = null;
               private $conn;
               private $host = '127.0.0.1';
@@ -84,7 +74,7 @@ jobs:
               
               public static function getInstance() {
                   if (self::$instance == null) {
-                      self::$instance = new TestDatabase();
+                      self::$instance = new Database();
                   }
                   return self::$instance;
               }
@@ -94,33 +84,15 @@ jobs:
               }
           }
           EOF
-      
+
       - name: 🧪 Run tests
         run: |
           cd backend/tests
           php run_all_tests.php
-      
-      - name: 📊 Upload test results
-        if: always()
+
+      - name: 📊 Upload test results (on failure)
+        if: failure()
         uses: actions/upload-artifact@v3
         with:
           name: test-results
           path: backend/tests/test_results.json
-
-  # ============================================
-  # JOB 2: Deploy to Railway (only if tests pass)
-  # ============================================
-  deploy:
-    name: 🚀 Deploy to Railway
-    runs-on: ubuntu-latest
-    needs: test
-    if: success() && github.ref == 'refs/heads/main'
-    
-    steps:
-      - name: 📥 Checkout code
-        uses: actions/checkout@v3
-      
-      - name: 🚀 Deploy to Railway
-        uses: railwayapp/railway-action@v2
-        with:
-          railwayToken: ${{ secrets.RAILWAY_TOKEN }}
