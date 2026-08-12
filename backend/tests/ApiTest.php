@@ -4,7 +4,7 @@ require_once __DIR__ . '/TestRunner.php';
 $runner = new TestRunner();
 
 // Test the actual API endpoints (requires server running)
-$baseUrl = 'http://localhost:8001';
+$baseUrl = 'https://1e2f-102-0-16-184.ngrok-free.app';
 
 // Test 1: Login endpoint
 $runner->addTest('API - Login Endpoint', function() use ($baseUrl) {

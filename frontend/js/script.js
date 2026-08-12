@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:8001'; // Change to your PHP backend URL
+const API_URL = 'https://1e2f-102-0-16-184.ngrok-free.app'; // Change to your PHP backend URL
 
 let currentUser = null;
 let token = null;

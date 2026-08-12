@@ -1,24 +1,39 @@
 <?php
+// ============================================
+// CORS CONFIGURATION - MUST BE AT THE VERY TOP
+// ============================================
 
-// Enable ALL error reporting
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
+// Get the requesting origin
+$origin = $_SERVER['HTTP_ORIGIN'] ?? '';
 
-// Log errors to a file
-ini_set('log_errors', 1);
-ini_set('error_log', __DIR__ . '/error.log');
+// List of allowed origins (add your Vercel URL)
+$allowed_origins = [
+    'http://localhost:8000',
+    'http://localhost:3000',
+    'https://swe-capstone-tawny.vercel.app',   // <-- ADD YOUR VERCEL URL
+    'https://*.vercel.app',                    // wildcard for all Vercel subdomains
+];
 
+// Allow the origin if it's in the list or ends with .vercel.app
+$allow_origin = '';
+if (in_array($origin, $allowed_origins) || strpos($origin, '.vercel.app') !== false) {
+    $allow_origin = $origin;
+} else {
+    // Fallback: allow all (for local testing) - remove in production
+    $allow_origin = '*';
+}
 
-header('Content-Type: application/json');
-header('Access-Control-Allow-Origin: *');  // ← Your frontend URL
+// Send CORS headers
+header('Access-Control-Allow-Origin: ' . $allow_origin);
 header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS');
-header('Access-Control-Allow-Headers: Content-Type, Authorization');
+header('Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With');
+header('Access-Control-Allow-Credentials: true');
+header('Access-Control-Max-Age: 86400'); // Cache preflight for 24 hours
 
-// Handle preflight requests
+// Handle preflight OPTIONS requests
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     http_response_code(200);
-    exit();
+    exit(); // No further execution needed for OPTIONS
 }
 // Autoload files
 spl_autoload_register(function ($class) {
