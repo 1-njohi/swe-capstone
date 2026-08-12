@@ -71,3 +71,256 @@ Stack trace:
 [11-Aug-2026 08:02:09 UTC] Stored hash: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
 [11-Aug-2026 08:02:09 UTC] Input password: password123
 [11-Aug-2026 08:02:09 UTC] Password verify result: FALSE
+[12-Aug-2026 04:57:42 UTC] === Login attempt ===
+[12-Aug-2026 04:57:42 UTC] Raw input: {"username":"student1","password":"password123"}
+[12-Aug-2026 04:57:42 UTC] Decoded data: Array
+(
+    [username] => student1
+    [password] => password123
+)
+
+[12-Aug-2026 04:57:42 UTC] User found: Yes
+[12-Aug-2026 04:57:42 UTC] User data: Array
+(
+    [id] => 2
+    [username] => student1
+    [password] => $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
+    [name] => John Doe
+    [email] => john@student.com
+    [role] => student
+    [created_at] => 2026-08-10 18:53:55
+)
+
+[12-Aug-2026 04:57:42 UTC] Stored hash: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
+[12-Aug-2026 04:57:42 UTC] Input password: password123
+[12-Aug-2026 04:57:42 UTC] Password verify result: FALSE
+[12-Aug-2026 04:57:51 UTC] === Login attempt ===
+[12-Aug-2026 04:57:51 UTC] Raw input: {"username":"student1","password":"password123"}
+[12-Aug-2026 04:57:51 UTC] Decoded data: Array
+(
+    [username] => student1
+    [password] => password123
+)
+
+[12-Aug-2026 04:57:51 UTC] User found: Yes
+[12-Aug-2026 04:57:51 UTC] User data: Array
+(
+    [id] => 2
+    [username] => student1
+    [password] => $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
+    [name] => John Doe
+    [email] => john@student.com
+    [role] => student
+    [created_at] => 2026-08-10 18:53:55
+)
+
+[12-Aug-2026 04:57:51 UTC] Stored hash: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
+[12-Aug-2026 04:57:51 UTC] Input password: password123
+[12-Aug-2026 04:57:51 UTC] Password verify result: FALSE
+[12-Aug-2026 04:58:02 UTC] === Login attempt ===
+[12-Aug-2026 04:58:02 UTC] Raw input: {"username":"admin","password":"password123"}
+[12-Aug-2026 04:58:02 UTC] Decoded data: Array
+(
+    [username] => admin
+    [password] => password123
+)
+
+[12-Aug-2026 04:58:02 UTC] User found: Yes
+[12-Aug-2026 04:58:02 UTC] User data: Array
+(
+    [id] => 1
+    [username] => admin
+    [password] => $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
+    [name] => Administrator
+    [email] => admin@university.com
+    [role] => admin
+    [created_at] => 2026-08-10 18:53:55
+)
+
+[12-Aug-2026 04:58:02 UTC] Stored hash: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
+[12-Aug-2026 04:58:02 UTC] Input password: password123
+[12-Aug-2026 04:58:02 UTC] Password verify result: FALSE
+[12-Aug-2026 04:58:34 UTC] === Login attempt ===
+[12-Aug-2026 04:58:34 UTC] Raw input: {"username":"admin","password":"password123"}
+[12-Aug-2026 04:58:34 UTC] Decoded data: Array
+(
+    [username] => admin
+    [password] => password123
+)
+
+[12-Aug-2026 04:58:34 UTC] User found: Yes
+[12-Aug-2026 04:58:34 UTC] User data: Array
+(
+    [id] => 1
+    [username] => admin
+    [password] => $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
+    [name] => Administrator
+    [email] => admin@university.com
+    [role] => admin
+    [created_at] => 2026-08-10 18:53:55
+)
+
+[12-Aug-2026 04:58:34 UTC] Stored hash: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
+[12-Aug-2026 04:58:34 UTC] Input password: password123
+[12-Aug-2026 04:58:35 UTC] Password verify result: FALSE
+[12-Aug-2026 04:59:10 UTC] === Login attempt ===
+[12-Aug-2026 04:59:10 UTC] Raw input: {"username":"admin","password":"password123"}
+[12-Aug-2026 04:59:10 UTC] Decoded data: Array
+(
+    [username] => admin
+    [password] => password123
+)
+
+[12-Aug-2026 04:59:10 UTC] User found: Yes
+[12-Aug-2026 04:59:10 UTC] User data: Array
+(
+    [id] => 1
+    [username] => admin
+    [password] => $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
+    [name] => Administrator
+    [email] => admin@university.com
+    [role] => admin
+    [created_at] => 2026-08-10 18:53:55
+)
+
+[12-Aug-2026 04:59:10 UTC] Stored hash: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
+[12-Aug-2026 04:59:10 UTC] Input password: password123
+[12-Aug-2026 04:59:10 UTC] Password verify result: FALSE
+[12-Aug-2026 04:59:33 UTC] === Login attempt ===
+[12-Aug-2026 04:59:33 UTC] Raw input: {"username":"admin","password":"password123"}
+[12-Aug-2026 04:59:33 UTC] Decoded data: Array
+(
+    [username] => admin
+    [password] => password123
+)
+
+[12-Aug-2026 04:59:33 UTC] User found: Yes
+[12-Aug-2026 04:59:33 UTC] User data: Array
+(
+    [id] => 1
+    [username] => admin
+    [password] => $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
+    [name] => Administrator
+    [email] => admin@university.com
+    [role] => admin
+    [created_at] => 2026-08-10 18:53:55
+)
+
+[12-Aug-2026 04:59:33 UTC] Stored hash: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
+[12-Aug-2026 04:59:33 UTC] Input password: password123
+[12-Aug-2026 04:59:33 UTC] Password verify result: FALSE
+[12-Aug-2026 05:00:16 UTC] === Login attempt ===
+[12-Aug-2026 05:00:16 UTC] Raw input: {"username":"admin","password":"password123"}
+[12-Aug-2026 05:00:16 UTC] Decoded data: Array
+(
+    [username] => admin
+    [password] => password123
+)
+
+[12-Aug-2026 05:00:16 UTC] User found: Yes
+[12-Aug-2026 05:00:16 UTC] User data: Array
+(
+    [id] => 1
+    [username] => admin
+    [password] => $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
+    [name] => Administrator
+    [email] => admin@university.com
+    [role] => admin
+    [created_at] => 2026-08-10 18:53:55
+)
+
+[12-Aug-2026 05:00:16 UTC] Stored hash: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
+[12-Aug-2026 05:00:16 UTC] Input password: password123
+[12-Aug-2026 05:00:16 UTC] Password verify result: FALSE
+[12-Aug-2026 05:02:04 UTC] === Login attempt ===
+[12-Aug-2026 05:02:04 UTC] Raw input: {"username":"admin","password":"password123"}
+[12-Aug-2026 05:02:04 UTC] Decoded data: Array
+(
+    [username] => admin
+    [password] => password123
+)
+
+[12-Aug-2026 05:02:04 UTC] User found: Yes
+[12-Aug-2026 05:02:04 UTC] User data: Array
+(
+    [id] => 1
+    [username] => admin
+    [password] => $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
+    [name] => Administrator
+    [email] => admin@university.com
+    [role] => admin
+    [created_at] => 2026-08-10 18:53:55
+)
+
+[12-Aug-2026 05:02:04 UTC] Stored hash: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
+[12-Aug-2026 05:02:04 UTC] Input password: password123
+[12-Aug-2026 05:02:05 UTC] Password verify result: FALSE
+[12-Aug-2026 05:02:27 UTC] === Login attempt ===
+[12-Aug-2026 05:02:27 UTC] Raw input: {"username":"admin","password":"password123"}
+[12-Aug-2026 05:02:27 UTC] Decoded data: Array
+(
+    [username] => admin
+    [password] => password123
+)
+
+[12-Aug-2026 05:02:27 UTC] User found: Yes
+[12-Aug-2026 05:02:27 UTC] User data: Array
+(
+    [id] => 1
+    [username] => admin
+    [password] => $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
+    [name] => Administrator
+    [email] => admin@university.com
+    [role] => admin
+    [created_at] => 2026-08-10 18:53:55
+)
+
+[12-Aug-2026 05:02:27 UTC] Stored hash: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
+[12-Aug-2026 05:02:27 UTC] Input password: password123
+[12-Aug-2026 05:02:27 UTC] Password verify result: FALSE
+[12-Aug-2026 05:05:43 UTC] === Login attempt ===
+[12-Aug-2026 05:05:43 UTC] Raw input: {"username":"admin","password":"password123"}
+[12-Aug-2026 05:05:43 UTC] Decoded data: Array
+(
+    [username] => admin
+    [password] => password123
+)
+
+[12-Aug-2026 05:05:43 UTC] User found: Yes
+[12-Aug-2026 05:05:43 UTC] User data: Array
+(
+    [id] => 1
+    [username] => admin
+    [password] => $2y$12$fva95gj.3BbMMl3Og9DI0.Jm6BDD4T7FwgnYBz/12loWYWkNB2mra
+    [name] => Administrator
+    [email] => admin@university.com
+    [role] => admin
+    [created_at] => 2026-08-10 18:53:55
+)
+
+[12-Aug-2026 05:05:43 UTC] Stored hash: $2y$12$fva95gj.3BbMMl3Og9DI0.Jm6BDD4T7FwgnYBz/12loWYWkNB2mra
+[12-Aug-2026 05:05:43 UTC] Input password: password123
+[12-Aug-2026 05:05:44 UTC] Password verify result: TRUE
+[12-Aug-2026 05:05:49 UTC] === Login attempt ===
+[12-Aug-2026 05:05:49 UTC] Raw input: {"username":"admin","password":"password123"}
+[12-Aug-2026 05:05:49 UTC] Decoded data: Array
+(
+    [username] => admin
+    [password] => password123
+)
+
+[12-Aug-2026 05:05:49 UTC] User found: Yes
+[12-Aug-2026 05:05:49 UTC] User data: Array
+(
+    [id] => 1
+    [username] => admin
+    [password] => $2y$12$fva95gj.3BbMMl3Og9DI0.Jm6BDD4T7FwgnYBz/12loWYWkNB2mra
+    [name] => Administrator
+    [email] => admin@university.com
+    [role] => admin
+    [created_at] => 2026-08-10 18:53:55
+)
+
+[12-Aug-2026 05:05:49 UTC] Stored hash: $2y$12$fva95gj.3BbMMl3Og9DI0.Jm6BDD4T7FwgnYBz/12loWYWkNB2mra
+[12-Aug-2026 05:05:49 UTC] Input password: password123
+[12-Aug-2026 05:05:50 UTC] Password verify result: TRUE

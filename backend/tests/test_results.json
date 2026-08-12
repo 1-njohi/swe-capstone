@@ -1,23 +1,23 @@
 {
-    "timestamp": "2026-08-10 18:11:06",
+    "timestamp": "2026-08-12 05:07:59",
     "total": 4,
     "passed": 4,
     "failed": 0,
     "results": [
         {
-            "name": "Course Model - Get All Courses",
+            "name": "Registration Model - Get User Registrations",
             "status": "PASS"
         },
         {
-            "name": "Course Model - Find Course by ID",
+            "name": "Registration Model - Prevent Duplicate Registration",
             "status": "PASS"
         },
         {
-            "name": "Course Model - Capacity Check",
+            "name": "Registration Model - Get Course Registrations",
             "status": "PASS"
         },
         {
-            "name": "Course Model - Available Spots",
+            "name": "Registration Model - Registration Count",
             "status": "PASS"
         }
     ]
