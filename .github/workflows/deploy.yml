@@ -52,19 +52,30 @@ jobs:
             sleep 2
           done
 
-      - name: 🗄️ Create test database and import schema
+      - name: 🗄️ Create test database
         run: |
-          echo "Creating test database..."
           mysql -h 127.0.0.1 -u root -proot -e "CREATE DATABASE IF NOT EXISTS course_registration_test;"
-          echo "Importing schema..."
+          echo "✅ Database created."
+
+      - name: 🔍 Verify schema file exists
+        run: |
+          ls -la database/
+          echo "--- First 20 lines of schema.sql ---"
+          head -20 database/schema.sql
+
+      - name: 🗄️ Import schema
+        run: |
           mysql -h 127.0.0.1 -u root -proot course_registration_test < database/schema.sql
-          echo "✅ Database ready!"
+          echo "✅ Schema imported."
+
+      - name: 🔍 List tables after import
+        run: |
+          echo "Tables in course_registration_test:"
+          mysql -h 127.0.0.1 -u root -proot -e "USE course_registration_test; SHOW TABLES;"
 
       - name: 🔧 Override database config for CI
         run: |
-          # Ensure config directory exists
           mkdir -p backend/config
-          
           cat > backend/config/database.php << 'EOF'
           <?php
           class Database {
@@ -100,7 +111,6 @@ jobs:
               }
           }
           EOF
-          echo "✅ Config override created."
 
       - name: 🧪 Run tests
         run: |
