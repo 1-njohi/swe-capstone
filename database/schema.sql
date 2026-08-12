@@ -1,5 +1,6 @@
--- Create database
-CREATE DATABASE IF NOT EXISTS course_registration;
+-- Drop and recreate database (optional)
+DROP DATABASE IF EXISTS course_registration;
+CREATE DATABASE course_registration;
 USE course_registration;
 
 -- Users table
@@ -37,12 +38,13 @@ CREATE TABLE IF NOT EXISTS registrations (
     UNIQUE KEY unique_registration (user_id, course_id)
 );
 
--- Insert sample data
+-- Insert users with CORRECT password hash (password: password123)
 INSERT INTO users (username, password, name, email, role) VALUES
 ('admin', '$2y$12$fva95gj.3BbMMl3Og9DI0.Jm6BDD4T7FwgnYBz/12loWYWkNB2mra', 'Administrator', 'admin@university.com', 'admin'),
 ('student1', '$2y$12$fva95gj.3BbMMl3Og9DI0.Jm6BDD4T7FwgnYBz/12loWYWkNB2mra', 'John Doe', 'john@student.com', 'student'),
 ('student2', '$2y$12$fva95gj.3BbMMl3Og9DI0.Jm6BDD4T7FwgnYBz/12loWYWkNB2mra', 'Jane Smith', 'jane@student.com', 'student');
 
+-- Insert sample courses
 INSERT INTO courses (code, name, description, credits, capacity) VALUES
 ('CS101', 'Introduction to Programming', 'Learn programming fundamentals with Python', 3, 30),
 ('CS201', 'Data Structures', 'Advanced data structures and algorithms', 4, 25),
@@ -50,5 +52,3 @@ INSERT INTO courses (code, name, description, credits, capacity) VALUES
 ('MATH101', 'Calculus I', 'Differential and integral calculus', 4, 35),
 ('PHY101', 'Physics I', 'Mechanics and thermodynamics', 4, 30),
 ('ENG101', 'English Composition', 'Academic writing and research skills', 3, 25);
-
--- Note: Passwords are 'password123' (hashed)
