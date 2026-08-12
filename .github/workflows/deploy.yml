@@ -35,20 +35,36 @@ jobs:
           php-version: '8.1'
           extensions: pdo, pdo_mysql, mysqli, json, mbstring
 
-      - name: 🗄️ Wait for MySQL
+      - name: 📦 Install MySQL client
         run: |
-          while ! mysqladmin ping -h"127.0.0.1" --silent; do
-            echo "Waiting for MySQL..."
+          sudo apt-get update
+          sudo apt-get install -y mysql-client
+
+      - name: 🗄️ Wait for MySQL to be ready
+        run: |
+          echo "Waiting for MySQL..."
+          for i in $(seq 1 30); do
+            if mysqladmin ping -h"127.0.0.1" -u root -proot --silent; then
+              echo "✅ MySQL is ready!"
+              break
+            fi
+            echo "Attempt $i/30: MySQL not ready yet..."
             sleep 2
           done
 
       - name: 🗄️ Create test database and import schema
         run: |
+          echo "Creating test database..."
           mysql -h 127.0.0.1 -u root -proot -e "CREATE DATABASE IF NOT EXISTS course_registration_test;"
+          echo "Importing schema..."
           mysql -h 127.0.0.1 -u root -proot course_registration_test < database/schema.sql
+          echo "✅ Database ready!"
 
       - name: 🔧 Override database config for CI
         run: |
+          # Ensure config directory exists
+          mkdir -p backend/config
+          
           cat > backend/config/database.php << 'EOF'
           <?php
           class Database {
@@ -84,6 +100,12 @@ jobs:
               }
           }
           EOF
+          echo "✅ Config override created."
+
+      - name: 🔍 Debug - Show config
+        run: |
+          echo "=== Database config ==="
+          cat backend/config/database.php
 
       - name: 🧪 Run tests
         run: |
